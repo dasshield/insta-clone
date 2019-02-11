@@ -1,0 +1,13 @@
+.header-stats li {
+  display: inline;
+  font-size: 18px;
+  margin-right: 40px;
+}
+
+.header-stats {
+  padding: 0;
+}
+
+.header-summary {
+  height: 215px;
+}

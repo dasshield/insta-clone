@@ -2,6 +2,18 @@ import React, {Component} from "react";
 import Header from "./components/Header/Header";
 import "./App.css";
 import "antd/dist/antd.css";
+import appRoutes from "./routes/AppRoutes";
+import {Redirect, Route, Switch} from "react-router-dom";
+
+const switchRoutes = (
+  <Switch>
+    {
+      appRoutes.map((prop, key) =>
+        <Route path={prop.path} component={prop.component} key={key}/>
+      )
+    }
+  </Switch>
+);
 
 class App extends Component {
   render() {
@@ -10,9 +22,7 @@ class App extends Component {
         <Header/>
         <main className="content">
           <div className="header-spacer"/>
-          <div style={{width: 200, height: 200}}>dfdsf</div>
-          <div style={{width: 200, height: 200}}>dfdsf</div>
-          <div style={{width: 200, height: 200}}>dfdsf</div>
+          {switchRoutes}
         </main>
       </div>
     );
