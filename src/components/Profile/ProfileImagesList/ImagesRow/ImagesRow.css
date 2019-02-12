@@ -1,0 +1,16 @@
+.images-row {
+  margin-bottom: 28px;
+}
+
+.image-wrapper {
+  cursor: pointer;
+}
+
+.row-image {
+  height: 295px;
+  width: 100%;
+}
+
+.row-image:hover {
+  opacity: 0.6;
+}

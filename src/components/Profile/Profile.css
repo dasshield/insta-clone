@@ -1,0 +1,16 @@
+.profile-tabs {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.profile-tabs .ant-tabs-tab-active {
+  color: #282c34 !important;
+}
+
+.ant-tabs-tab:hover {
+  color: #282c34 !important;
+}
+
+.ant-tabs-ink-bar {
+  background-color: #282c34 !important;
+}
