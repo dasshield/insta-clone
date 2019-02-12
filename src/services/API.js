@@ -1,5 +1,5 @@
 import axios from "axios";
 
-axios.defaults.headers.common['Authorization'] = "Client-ID 4c45ce40e5c7a6e606a66752c21e7564a82a88d762558946b24a6fcb9457474c";
+axios.defaults.headers.common['Authorization'] = "Client-ID c1ded09d2545adbf2f4825992231a9b7432b39ad6d9b24b0af8a5cf102bfe6ab";
 
 export default axios;

@@ -4,18 +4,25 @@ import {
   FETCH_IMAGES_SUCCESS,
   FETCH_POST,
   FETCH_POST_FAIL,
-  FETCH_POST_SUCCESS, SET_CURRENT_POST
+  FETCH_POST_SUCCESS,
 } from "./Actions";
 import axios from "../services/API";
 
-export function fetchImages() {
-  return loadImages;
+export function fetchImages(page) {
+  return (dispatch, getState) => {
+    return loadImages(dispatch, getState, page);
+  }
 }
 
-const loadImages = (dispatch, getState) => {
+const loadImages = (dispatch, getState, page) => {
   dispatch({type: FETCH_IMAGES});
 
-  return axios.get("/photos")
+  const params = {
+    page,
+    per_page: 9,
+  };
+
+  return axios.get("/photos", {params})
     .then(res => {
       dispatch({type: FETCH_IMAGES_SUCCESS, payload: res.data});
     })

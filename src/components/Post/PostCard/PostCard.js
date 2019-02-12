@@ -10,7 +10,7 @@ const PostCard = ({data}) => (
     ? <Spin tip="Loading..."/>
     : <div className="post-container">
       <div className="post-content">
-        <img alt={data.post.description} src={data.post.urls.small}/>
+        <img alt={data.post.description || "alt"} src={data.post.urls.small}/>
       </div>
       <div className="post-content post-description">
         <Card className="post-user-card">

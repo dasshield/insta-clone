@@ -18,7 +18,7 @@ export default function (state = initialState, action) {
         ...state,
         isFetching: false,
         hasError: false,
-        images: action.payload,
+        images: [...state.images, ...action.payload],
       });
     default:
       return state;
